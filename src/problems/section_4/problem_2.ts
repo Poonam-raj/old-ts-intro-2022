@@ -19,5 +19,7 @@ const admin: Admin[] = [
 function updateAdmin(admin: unknown, fieldsToUpdate: unknown): unknown {
   return { ...admin, ...fieldsToUpdate };
 }
-updateAdmin(admin[0], { name: "barry" });
-updateAdmin(admin[0], { accessLevel: 4, age: 22 });
+const admin1 = updateAdmin(admin[0], { name: "barry" });
+const admin2 = updateAdmin(admin[0], { accessLevel: 4, age: 22 });
+
+console.log(admin1.name);
