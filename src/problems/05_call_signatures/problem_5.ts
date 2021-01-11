@@ -10,4 +10,3 @@ const logger: Logger = (userName, numberToLogOrMessage, message?) => {
 
 logger("Jim", "I expect my error to be here");
 logger("Alex", 42, "the meaning");
-
