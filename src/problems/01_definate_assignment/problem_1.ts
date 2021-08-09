@@ -1,6 +1,6 @@
-let greeting: unknown = "Good morning typescript enthusiast";
+let greeting: string = "Good morning typescript enthusiast";
 
-const shoutGreeting = (greet: unknown) => {
+const shoutGreeting = (greet: string) => {
   console.log(greet.toUpperCase());
 };
 shoutGreeting(greeting);

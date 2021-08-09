@@ -1,6 +1,6 @@
-let price: unknown = 100;
+let price: number = 100;
 
-const isExpensive = (val: unknown) => {
+const isExpensive = (val: number) => {
   return val > 50;
 };
 isExpensive(price);
