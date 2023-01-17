@@ -1,6 +1,6 @@
-type CreateUser = unknown;
+type CreateUser = (name: string, age: number, occupation: string) => Object;
 
-const createUser: unknown = (name, age, occupation) => {
-  const newUser: unknown = { name, age, occupation };
+const createUser: CreateUser = (name, age, occupation) => {
+  const newUser: Object = { name, age, occupation };
   return newUser;
 };

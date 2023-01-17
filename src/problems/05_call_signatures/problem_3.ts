@@ -1,9 +1,9 @@
-type InnerCounter = unknown;
-type Counter = unknown;
+type InnerCounter = () => number;
+type Counter = () => InnerCounter;
 
 const count: Counter = () => {
   let i = 0;
-  const newFunc: unknown = () => {
+  const newFunc: InnerCounter = () => {
     return ++i;
   };
   return newFunc;
