@@ -10,27 +10,27 @@ type Admin = {
   accessLevel: number;
 };
 
-type Person = User;
+type Person = User | Admin;
 
-const people: User[] = [
+const people: Person[] = [
   {
-    name: "Joe Bloggs",
+    name: 'Joe Bloggs',
     age: 36,
-    occupation: "clothing designer",
+    occupation: 'clothing designer',
   },
   {
-    name: "Lisa Simpson",
+    name: 'Lisa Simpson',
     age: 21,
-    occupation: "POTUS",
+    occupation: 'POTUS',
   },
   {
-    name: "Tech Support",
+    name: 'Tech Support',
     age: 56,
     accessLevel: 5,
   },
 ];
 
-const logPerson = (person: unknown) => {
+const logPerson = (person: Person) => {
   console.log(`${person.name} ${person.age}`);
 };
 
