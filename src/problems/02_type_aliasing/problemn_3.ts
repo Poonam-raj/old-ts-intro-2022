@@ -1,38 +1,45 @@
-type Burger = unknown;
+type Burger = {
+  bun: string;
+  gherkin: boolean;
+  filling: string;
+  without?: string[];
+  salad: boolean;
+  extras: string[];
+};
 
 const orders: Burger[] = [
   {
-    bun: "sesame",
+    bun: 'sesame',
     gherkin: true,
-    filling: "tofu",
+    filling: 'tofu',
     salad: true,
-    without: ["onions"],
+    without: ['onions'],
     extras: [],
   },
   {
-    bun: "brioche",
+    bun: 'brioche',
     gherkin: false,
-    filling: "beef",
+    filling: 'beef',
     salad: true,
     extras: [],
   },
   {
-    bun: "sesame",
+    bun: 'sesame',
     gherkin: true,
-    filling: "mushroom",
+    filling: 'mushroom',
     salad: true,
-    extras: ["cheese", "gherkin"],
+    extras: ['cheese', 'gherkin'],
   },
 ];
 
 function addGherkin(burgerOrder: Burger) {
   const hasGherkin = burgerOrder.gherkin;
-  const hasExtra = burgerOrder.extras.includes("gherkin");
+  const hasExtra = burgerOrder.extras.includes('gherkin');
   if (hasGherkin) {
-    console.log("applying gherkins");
+    console.log('applying gherkins');
   }
   if (hasExtra) {
-    console.log("applying extra gherkins–");
+    console.log('applying extra gherkins–');
   }
 }
 

@@ -1,23 +1,29 @@
-type Developer = unknown;
+type Developer = {
+  name: string;
+  age: number;
+  languages: string[];
+  lovesCoding: boolean;
+  job: string;
+};
 
-const devs: unknown[] = [
+const devs: Developer[] = [
   {
-    name: "Jim",
+    name: 'Jim',
     age: 33,
-    languages: ["JS", "TS", "Python"],
+    languages: ['JS', 'TS', 'Python'],
     lovesCoding: true,
-    job: "tutor",
+    job: 'tutor',
   },
   {
-    name: "Haz",
+    name: 'Haz',
     age: 21,
-    languages: ["JS", "TS", "Python"],
+    languages: ['JS', 'TS', 'Python'],
     lovesCoding: true,
-    job: "tutor",
+    job: 'tutor',
   },
 ];
-const logDev = (dev: unknown) => {
-  console.log(`${dev.name} ${dev.lovesCoding ? "loves" : "hates"} coding!`);
+const logDev = (dev: Developer) => {
+  console.log(`${dev.name} ${dev.lovesCoding ? 'loves' : 'hates'} coding!`);
 };
 
 devs.forEach(logDev);
